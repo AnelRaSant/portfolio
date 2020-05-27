@@ -7,6 +7,7 @@
     <title>ANEL'S PORTFOLIO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+
     
     <style>
 /* Itried to add a galaxy theme on the background of the entire body, but the stars moving did not appear */
@@ -52,6 +53,21 @@
         width: 100%;
                 }
 
+        #clock {
+            font-size: 28px;
+            color:greenyellow;
+            font-weight: 600;
+            border-top: lightgreen;
+            border-radius: 4px;
+            box-shadow: lawngreen;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            min-height: 10vh;
+            margin-top: 0em;
+        }
+
 
         .about {
             align-items: center;
@@ -94,6 +110,8 @@
         }
 
         .share-button{
+            /* ESTO CENTRA BOTONES Y RIBBONS margin: 2em auto 3em; */
+            margin: 2em auto 3em;
             width: 280px;
             height: 80px;
             background: palevioletred;
@@ -170,6 +188,60 @@
             text-align: center;
           }
 
+
+          .ribbon{
+              position: relative;
+              width: 50%;
+              color: maroon;
+              background: palevioletred;
+              text-align: center;
+              align-items: center;
+              padding: 15px 20px;
+              font-size: 25px;
+              border-radius: 2px;
+              letter-spacing: .1em;
+              margin: 2em auto 3em;
+          }
+
+          .ribbon::before, .ribbon::after{
+           content: "";
+           position: absolute;
+           display: block;
+           bottom: -15px;
+           border: 23px solid palevioletred;
+           z-index: -1;
+          }
+
+          .ribbon::before {
+            left: -30px;
+            border-right-width: 23px;
+            border-left-color: transparent;
+          }
+
+          .ribbon::after{
+              right: -30px;
+              border-left-width: 23px;
+              border-right-color: transparent;
+          }
+
+          .ribbon span::before, .ribbon span::after{
+              content: "";
+              position: absolute;
+              border-style: solid;
+              border-color: pink;
+              bottom: -15px;
+          }
+
+          .ribbon span::before{
+              left: 0;
+              border-width: 15px 0 0 15px;
+          }
+
+          .ribbon span::after{
+              right: 0;
+              border-width: 15px 15px 0 0;
+          }
+
         .footer {
             color: white;
             text-align: center;
@@ -207,7 +279,8 @@
 
 
 <div class="container"> 
-
+<!-- TRIED TO ADD A CLOCK HERE BUT IT DID NOT WORK. I ADDED CSS AND JS, THE JS IS REFERED ON A DIFFERENT FOLDER -->
+    <div id="clock">THIS SHOULD DISPLAY A CLOCK</div>
 
     <div class="about">
         <div class="h1">
@@ -227,7 +300,6 @@
                 I´m currently learning new skills and habilities to become a Full Stack Developer. 
                 I love technology, and the power it gives people to innovate and to turn ideas into real projects. </p>
                <br>
-
                 <div class="share-button">
                     <span><i class="fas fa-share-alt"></i>LEARN MORE </span>
                     <a href="https://www.facebook.com/AnelRamirezSant/" class="btn btn-primary">Visit my FB Page</a>
@@ -254,7 +326,10 @@
 </div>
 </div>
 
-
+<!-- IM ADDING A COOL RIBBON -->
+<div class="ribbon">
+    <span style="color: white;">THANK YOU FOR YOUR VISIT</span>
+</div>
 
 <br>
 <div class="footer">
@@ -267,24 +342,10 @@
 </div>
 
 
-<script type="text/javascript">
-    function createStars(type, quantity) {
-        for (let i = 0; i<quantity; i++) {
-            var star = document.createElement('div');
-            star.classList.add('star', `type-${type}`); 
-            star.style.left = `${randomNumber(1,99)}%`;
-            star.style.bottom = `${randomNumber(1,99)}%`;
-            star.style.animationDuration = `${randomNumber(50,200)}s`;
-            document.body.appendChild8(star);
-        }
-    }
-    function randomNumber(min, max) {
-        return Math.floor(Math.random() *max) + min;
-    }
-    createStars(1,100);
-    createStars(2,85);
-    createStars(3,70);
-</script>
 
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>
