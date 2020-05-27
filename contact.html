@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT INFO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
+   
+   <style>
+     .body {
+    font-family: 'Oswald', sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom,
+                                 #3d0155 0%, rgb(46, 1, 22) 100%);
+}
+      
         .navbar {
+        font-family: 'Oswald', sans-serif;
         background-color: palevioletred;
         font-size: larger;
         width: 100%;
@@ -20,16 +30,18 @@
             text-align: center;
             margin-top: 60px;
             font-weight: bold;
-            color: white;
+            color: rgb(255, 255, 255);
             padding: 20px;
                 }
 
                 .button {
+                  
+                   font-family: 'Oswald', sans-serif;
                     text-align: center;
-                    background-color: palevioletred;
                 }
 
         .carousel {
+           font-family: 'Oswald', sans-serif;
             max-width: 1200px;
             margin: auto;
             background: purple;
@@ -46,14 +58,16 @@
         }
 
          .footer {
+        color: white;
+        font-family: 'Oswald', sans-serif;
         text-align: center;
         padding: 0px;
-        background-color: gray;
+        background-color: rgba(128, 128, 128, 0.63);
         margin: 0px;
                 }
     </style>
 </head>
-<body>
+<body class="body">
     
     <div class="navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -83,43 +97,44 @@
         <h1>CONTACT ME</h1>
     </div>
 
+
     <br>
 
     <div>
         <form>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputEmail4">Complete Name</label>
+                <label for="inputName4" style="color: white;">Complete Name</label>
                 <input type="name" class="form-control" id="inputname">
               </div>
               <div class="form-group col-md-6">
-                <label for="inputPassword4">Email</label>
+                <label for="inputEmail4" style="color: white;">Email</label>
                 <input type="email" class="form-control" id="inputEmail4">
               </div>
             </div>
             <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <label for="inputAddress" style="color: white;">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="">
             </div>
             <div class="form-group">
-              <label for="inputAddress2">Phone Number</label>
+              <label for="inputPhone2" style="color: white;">Phone Number</label>
               <input type="number" class="form-control" id="input" placeholder="Office or Personal">
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
+                <label for="inputCity" style="color: white;">City</label>
                 <input type="text" class="form-control" id="inputCity">
               </div>
               <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                  <option selected>MEXICO CITY</option>
-                  <option selected>OAXACA</option>
+                <label for="inputCountry" style="color: white;">Country</label>
+                <select id="inputCountry" class="form-control">
+                  <option selected>MEXICO</option>
+                  <option selected>USA</option>
                 </select>
               </div>
             </div>
             <div class="button">
-            <button type="submit" class="btn btn-primary">SEND</button>
+            <button type="submit" class="btn btn-primary btn-lg">CONTACT NOW</button>
             </div>
           </form>
     </div>

@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
+
+body {
+    font-family: 'Oswald', sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom,
+                                 #3d0155 0%, rgb(46, 1, 22) 100%);
+}
+
         .navbar {
+        font-family: 'Oswald', sans-serif;
         background-color: palevioletred;
         font-size: larger;
         width: 100%;
         /* HACE FALTA CENTRAR EL CONTENIDO/TABS DEL NAVBAR */
                 }
 
+        #portfoliocolor{
+          color: white;
+        }
+
          .portfolio {
+          font-family: 'Oswald', sans-serif;
             font-style: inherit;
             background-color: palevioletred;
             font-size: xx-large;
             text-align: center;
             margin-top: 60px;
             font-weight: bold;
-            color: white;
+            color: rgb(29, 8, 8);
             padding: 20px;
                }
 
                 .footer {
-            text-align: center;
-            padding: 0px;
-            background-color: gray;
-            margin: 0px;
+                  font-family: 'Oswald', sans-serif;
+                  color: white;
+                  text-align: center;
+                  padding: 0px;
+                  background-color: rgba(128, 128, 128, 0.63);
+                  margin: 0px;
                 }
+               
+
     </style>
 
 </head>
@@ -61,60 +80,93 @@
   <div class="container"> 
 
     <div class="portfolio">
-        <header>
+        <h1 id="portfoliocolor">
             PORTFOLIO
-        </header>
+        </h1>
+    <div>   
 
-    <div>
-        <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">World Guess</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">World Guess</small></p>
-            </div>
-            <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/circus.png" class="card-img-top" alt="...">
-          </div>
 
-        <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Info Widget</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Info Widget</small></p>
-            </div>
-            <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/submarine.png" class="card-img-top" alt="...">
-          </div>
 
+          <!--Projects section v.4-->
+<section>
+
+  <!--Section heading-->
+  <h2 class="h1-responsive font-weight-bold text-center my-5" style="color: white;">Take a look at my projects</h2>
+
+</section>
+
+
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4">
           <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Rock,Paper,Scissors</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Rock,Paper,Scissors</small></p>
-            </div>
             <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/safe.png" class="card-img-top" alt="...">
-          </div>
-
-
-          <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Trivia Game</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Trivia Game</small></p>
+              <h5 class="card-title">Password Generator</h5>
+              <p class="card-text">Application that generates a random password based on user-selected criteria. </p>
+              <a href="https://anelrasant.github.io/homework3/Develop/index.html" class="btn btn-primary btn-lg">VIEW NOW</a>
             </div>
-            <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/game.png" class="card-img-top" alt="...">
           </div>
-    </div>
-    </div>
-</div> 
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/circus.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Timed Multiple-choice Quiz</h5>
+              <p class="card-text">Application that creates a timed code quiz with multiple-choice questions and stored scores.</p>
+              <a href="https://anelrasant.github.io/QUIZCODE/codequiz.html" class="btn btn-primary btn-lg">VIEW NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/safe.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Work Day Scheduler</h5>
+              <p class="card-text">This calendar application allows the user to save events for each hour of the day.</p>
+              <a href="https://anelrasant.github.io/homework5/index.html" class="btn btn-primary btn-lg">VIEW NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/circus.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Weather Dashboard</h5>
+              <p class="card-text">This application is a weather dashboard that retrieves weather data for cities.</p>
+              <a href="https://anelrasant.github.io/weatherdashboard/index.html" class="btn btn-primary btn-lg">VIEW NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <br>
-
-    <div class="footer">
-        <footer>
-            <p>Posted by: Anel Ramírez Santiago</p>
-            <p>Contact information:
-                anel.rmrz.stgo7@gmail.com</p>
-                Copyright © AnelWebsite 2020
-          </footer>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="https://blackrockdigital.github.io/startbootstrap-freelancer/assets/img/portfolio/submarine.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Backpacker Assistant</h5>
+            <p class="card-text">This application provides the most important info about any destination, as well as a map.</p>
+            <a href="https://kylep90.github.io/Project1/index.html" class="btn btn-primary btn-lg">VIEW NOW</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+  </div>
+  </div> 
+ <br>
 </body>
+
+<footer>
+<div class="footer">
+  <br>
+    <footer>
+        <p>Posted by: Anel Ramírez Santiago</p>
+        <p>Contact information:
+            anel.rmrz.stgo7@gmail.com</p>
+            Copyright © AnelWebsite 2020
+      </footer>
+</div>
+</footer>
+
 </html>
