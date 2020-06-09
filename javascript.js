@@ -17,21 +17,3 @@
     createStars(2,85);
     createStars(3,70);
 
-    //CLOCK
-    const showClock = () => {
-        const clock = document.getElementById('clock');
-        let currDate = new Date();
-
-        let h = currDate.getHours();
-        let m = currDate.getMinutes();
-        let s = currDate.getSeconds();
-
-        m = m < 10 ? `0${m}` : m;
-        s = s < 10 ? `0${s}` : s;
-
-        clock.innerText = `${h}:${m}:${s}`;
-
-        setTimeout(showClock, 1000)
-    }
-
-    showClock();

@@ -1,0 +1,585 @@
+.body {
+    font-family: 'Oswald', sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom,
+                                 #3d0155 0%, rgb(46, 1, 22) 100%);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+.star{
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    animation: move;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.type-1{
+    width: 1px;
+    height:1px;
+}
+.type-2{
+    width:2px;
+    height:2px;
+}
+.type-3{
+    width: 3px;
+    height: 3px;
+}
+@keyframes move {
+    0%{ transform: translateY(0); }
+    100%{ transform: translateY(-1000px);}
+}
+
+
+        .navbar {
+        background-color: palevioletred;
+        font-size: larger;
+        width: 100%;
+                }
+
+        #clock {
+            font-size: 28px;
+            color:greenyellow;
+            font-weight: 600;
+            border-top: lightgreen;
+            border-radius: 4px;
+            box-shadow: lawngreen;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            min-height: 10vh;
+            margin-top: 0em;
+        }
+
+
+        .about {
+            align-items: center;
+            justify-content: center;
+            font-family: 'Oswald', sans-serif;
+            font-style: inherit;
+            background-color: palevioletred;
+            font-size: xx-large;
+            text-align: center;
+            margin-top: 60px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+               }
+
+
+    @keyframes headerFadeIn{
+        0% {
+            transform: translateX(-40px);
+            opacity: 0;
+        }
+        100% {
+            transform: none;
+            opacity: 1;
+        }
+    }
+        .h1 {
+            margin-bottom: 0px;
+            text-align: center;
+            transform: translateX(-40px);
+            opacity: 0;
+            animation: headerFadeIn 0.7s;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+            nth-child(2);
+            
+                animation-delay:0.5s;
+            
+            }
+
+        .share-button{
+            /* ESTO CENTRA BOTONES Y RIBBONS margin: 2em auto 3em; */
+            margin: 2em auto 3em;
+            width: 280px;
+            height: 80px;
+            background: palevioletred;
+            border-radius: 40px;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            transition: .3s linear;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1),
+                        inset 5px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .share-button:hover{
+            transform: scale(1.1);
+        }
+
+        .share-button span{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: palevioletred;
+            color: whitesmoke;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 80px;
+            z-index: 999;
+            font-size: 20px;
+            text-transform: uppercase;
+            transition: .6s linear;
+            border-radius: 40px;
+        }
+
+        .share-button:hover span {
+            transform: translateX(-100%);
+            transition-delay: .3s;
+        }
+
+        .share-button a {
+            flex: 1;
+            font-size: 26px;
+            color: white;
+            text-align: center;
+            transform: translateX(-100%)
+            
+            transition; .3s linearGradient;
+        }
+
+        .share-button:hover a {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .share-button a:nth-of-type(1) { transition-delay: 1s; }
+        .share-button a:nth-of-type(2) { transition-delay: .8s; }
+        .share-button a:nth-of-type(3) { transition-delay: .6s; }
+        .share-button a:nth-of-type(4) { transition-delay: .4s; }
+
+
+        .carousel {
+            max-width: 1200px;
+            margin: auto;
+            background: palevioletred;
+            overflow: auto;
+        }
+
+          .picture {
+            margin: 5px;
+            border: 1px solid palevioletred;
+            height: a;
+            padding: 15px;
+            text-align: center;
+          }
+
+
+          .ribbon{
+              position: relative;
+              width: 50%;
+              color: maroon;
+              background: palevioletred;
+              text-align: center;
+              align-items: center;
+              padding: 15px 20px;
+              font-size: 25px;
+              border-radius: 2px;
+              letter-spacing: .1em;
+              margin: 2em auto 3em;
+          }
+
+          .ribbon::before, .ribbon::after{
+           content: "";
+           position: absolute;
+           display: block;
+           bottom: -15px;
+           border: 23px solid palevioletred;
+           z-index: -1;
+          }
+
+          .ribbon::before {
+            left: -30px;
+            border-right-width: 23px;
+            border-left-color: transparent;
+          }
+
+          .ribbon::after{
+              right: -30px;
+              border-left-width: 23px;
+              border-right-color: transparent;
+          }
+
+          .ribbon span::before, .ribbon span::after{
+              content: "";
+              position: absolute;
+              border-style: solid;
+              border-color: pink;
+              bottom: -15px;
+          }
+
+          .ribbon span::before{
+              left: 0;
+              border-width: 15px 0 0 15px;
+          }
+
+          .ribbon span::after{
+              right: 0;
+              border-width: 15px 15px 0 0;
+          }
+
+        .footer {
+            color: white;
+            text-align: center;
+            padding: 0px;
+            background-color: rgba(128, 128, 128, 0.63);
+            margin: 0px;
+                }
+
+                
+
+
+
+
+
+
+/* HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEY PORTFOLIO STYLESHEET */
+
+
+                body {
+                    font-family: 'Oswald', sans-serif;
+                    min-height: 100vh;
+                    background: radial-gradient(ellipse at bottom,
+                                                 #3d0155 0%, rgb(46, 1, 22) 100%);
+                }
+                
+                        .navbar {
+                        font-family: 'Oswald', sans-serif;
+                        background-color: palevioletred;
+                        font-size: larger;
+                        width: 100%;
+                        /* HACE FALTA CENTRAR EL CONTENIDO/TABS DEL NAVBAR */
+                                }
+                
+                        #portfoliocolor{
+                          color: white;
+                        }
+                
+                         .portfolio {
+                          font-family: 'Oswald', sans-serif;
+                            font-style: inherit;
+                            background-color: palevioletred;
+                            font-size: xx-large;
+                            text-align: center;
+                            margin-top: 60px;
+                            font-weight: bold;
+                            color: rgb(29, 8, 8);
+                            padding: 20px;
+                               }
+                
+                               .ribbon{
+                              position: relative;
+                              width: 50%;
+                              color: maroon;
+                              background: palevioletred;
+                              text-align: center;
+                              align-items: center;
+                              padding: 15px 20px;
+                              font-size: 25px;
+                              border-radius: 2px;
+                              letter-spacing: .1em;
+                              margin: 2em auto 3em;
+                          }
+                
+                          .ribbon::before, .ribbon::after{
+                           content: "";
+                           position: absolute;
+                           display: block;
+                           bottom: -15px;
+                           border: 23px solid palevioletred;
+                           z-index: -1;
+                          }
+                
+                          .ribbon::before {
+                            left: -30px;
+                            border-right-width: 23px;
+                            border-left-color: transparent;
+                          }
+                
+                          .ribbon::after{
+                              right: -30px;
+                              border-left-width: 23px;
+                              border-right-color: transparent;
+                          }
+                
+                          .ribbon span::before, .ribbon span::after{
+                              content: "";
+                              position: absolute;
+                              border-style: solid;
+                              border-color: pink;
+                              bottom: -15px;
+                          }
+                
+                          .ribbon span::before{
+                              left: 0;
+                              border-width: 15px 0 0 15px;
+                          }
+                
+                          .ribbon span::after{
+                              right: 0;
+                              border-width: 15px 15px 0 0;
+                          }
+                
+                          .share-button{
+                            /* ESTO CENTRA BOTONES Y RIBBONS margin: 2em auto 3em; */
+                            margin: 2em auto 3em;
+                            width: 280px;
+                            height: 80px;
+                            background: palevioletred;
+                            border-radius: 40px;
+                            color: white;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            cursor: pointer;
+                            transition: .3s linear;
+                            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1),
+                                        inset 5px 2px 10px rgba(0, 0, 0, 0.1);
+                        }
+                        .share-button:hover{
+                            transform: scale(1.1);
+                        }
+                
+                        .share-button span{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background: palevioletred;
+                            color: whitesmoke;
+                            text-align: center;
+                            letter-spacing: 1px;
+                            line-height: 80px;
+                            z-index: 999;
+                            font-size: 20px;
+                            text-transform: uppercase;
+                            transition: .6s linear;
+                            border-radius: 40px;
+                        }
+                
+                        .share-button:hover span {
+                            transform: translateX(-100%);
+                            transition-delay: .3s;
+                        }
+                
+                        .share-button a {
+                            flex: 1;
+                            font-size: 26px;
+                            color: white;
+                            text-align: center;
+                            transform: translateX(-100%)
+                            opacity: 0;
+                            transition: .3s linearGradient;
+                        }
+                
+                        .share-button:hover a {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+                
+                        .share-button a:nth-of-type(1) { transition-delay: 1s; }
+                        .share-button a:nth-of-type(2) { transition-delay: .8s; }
+                        .share-button a:nth-of-type(3) { transition-delay: .6s; }
+                        .share-button a:nth-of-type(4) { transition-delay: .4s; }
+                
+                
+                                .footer {
+                                  font-family: 'Oswald', sans-serif;
+                                  color: white;
+                                  text-align: center;
+                                  padding: 0px;
+                                  background-color: rgba(128, 128, 128, 0.63);
+                                  margin: 0px;
+                                }
+                               
+                
+
+
+
+ /* HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEY  CONTACT TAB STYLESHEET */
+
+
+                                .body {
+                                    font-family: 'Oswald', sans-serif;
+                                    min-height: 100vh;
+                                    background: radial-gradient(ellipse at bottom,
+                                                                 #3d0155 0%, rgb(46, 1, 22) 100%);
+                                }
+                                      
+                                        .navbar {
+                                        font-family: 'Oswald', sans-serif;
+                                        background-color: palevioletred;
+                                        font-size: larger;
+                                        width: 100%;
+                                        /* HACE FALTA CENTRAR EL CONTENIDO/TABS DEL NAVBAR */
+                                                }
+                                
+                                                .contact { 
+                                            font-style: inherit;
+                                            background-color: palevioletred;
+                                            font-size: xx-large;
+                                            text-align: center;
+                                            margin-top: 60px;
+                                            font-weight: bold;
+                                            color: rgb(255, 255, 255);
+                                            padding: 20px;
+                                                }
+                                
+                                                .button {
+                                                  
+                                                   font-family: 'Oswald', sans-serif;
+                                                    text-align: center;
+                                                }
+                                
+                                        .carousel {
+                                           font-family: 'Oswald', sans-serif;
+                                            max-width: 1200px;
+                                            margin: auto;
+                                            background: purple;
+                                            overflow: auto;
+                                        }
+                                
+                                        .picture {
+                                            margin: 5px;
+                                            border: 1px solid palevioletred;
+                                            width: 100%;
+                                            height: a;
+                                            padding: 15px;
+                                            text-align: center;
+                                        }
+                                
+                                        .ribbon{
+                                              position: relative;
+                                              width: 50%;
+                                              color: maroon;
+                                              background: palevioletred;
+                                              text-align: center;
+                                              align-items: center;
+                                              padding: 15px 20px;
+                                              font-size: 25px;
+                                              border-radius: 2px;
+                                              letter-spacing: .1em;
+                                              margin: 2em auto 3em;
+                                          }
+                                
+                                          .ribbon::before, .ribbon::after{
+                                           content: "";
+                                           position: absolute;
+                                           display: block;
+                                           bottom: -15px;
+                                           border: 23px solid palevioletred;
+                                           z-index: -1;
+                                          }
+                                
+                                          .ribbon::before {
+                                            left: -30px;
+                                            border-right-width: 23px;
+                                            border-left-color: transparent;
+                                          }
+                                
+                                          .ribbon::after{
+                                              right: -30px;
+                                              border-left-width: 23px;
+                                              border-right-color: transparent;
+                                          }
+                                
+                                          .ribbon span::before, .ribbon span::after{
+                                              content: "";
+                                              position: absolute;
+                                              border-style: solid;
+                                              border-color: pink;
+                                              bottom: -15px;
+                                          }
+                                
+                                          .ribbon span::before{
+                                              left: 0;
+                                              border-width: 15px 0 0 15px;
+                                          }
+                                
+                                          .ribbon span::after{
+                                              right: 0;
+                                              border-width: 15px 15px 0 0;
+                                          }
+                                
+                                          .share-button{
+                                            /* ESTO CENTRA BOTONES Y RIBBONS margin: 2em auto 3em; */
+                                            margin: 2em auto 3em;
+                                            width: 280px;
+                                            height: 80px;
+                                            background: palevioletred;
+                                            border-radius: 40px;
+                                            color: white;
+                                            overflow: hidden;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            position: relative;
+                                            cursor: pointer;
+                                            transition: .3s linear;
+                                            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1),
+                                                        inset 5px 2px 10px rgba(0, 0, 0, 0.1);
+                                        }
+                                        .share-button:hover{
+                                            transform: scale(1.1);
+                                        }
+                                
+                                        .share-button span{
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: palevioletred;
+                                            color: whitesmoke;
+                                            text-align: center;
+                                            letter-spacing: 1px;
+                                            line-height: 80px;
+                                            z-index: 999;
+                                            font-size: 20px;
+                                            text-transform: uppercase;
+                                            transition: .6s linear;
+                                            border-radius: 40px;
+                                        }
+                                
+                                        .share-button:hover span {
+                                            transform: translateX(-100%);
+                                            transition-delay: .3s;
+                                        }
+                                
+                                        .share-button a {
+                                            flex: 1;
+                                            font-size: 26px;
+                                            color: white;
+                                            text-align: center;
+                                            transform: translateX(-100%)
+                                            opacity: 0;
+                                            transition: .3s linearGradient;
+                                        }
+                                
+                                        .share-button:hover a {
+                                            opacity: 1;
+                                            transform: translateX(0);
+                                        }
+                                
+                                        .share-button a:nth-of-type(1) { transition-delay: 1s; }
+                                        .share-button a:nth-of-type(2) { transition-delay: .8s; }
+                                        .share-button a:nth-of-type(3) { transition-delay: .6s; }
+                                        .share-button a:nth-of-type(4) { transition-delay: .4s; }
+                                
+                                         .footer {
+                                        color: white;
+                                        font-family: 'Oswald', sans-serif;
+                                        text-align: center;
+                                        padding: 0px;
+                                        background-color: rgba(128, 128, 128, 0.63);
+                                        margin: 0px;
+                                                }
